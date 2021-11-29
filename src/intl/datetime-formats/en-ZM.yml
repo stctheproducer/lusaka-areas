@@ -1,0 +1,13 @@
+short:
+  year: numeric
+  month: numeric
+  day: numeric
+long:
+  weekday: long
+  year: numeric
+  month: long
+  day: numeric
+time:
+  hour: 2-digit
+  minute: numeric
+  second: numeric

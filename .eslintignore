@@ -1,0 +1,17 @@
+# don't lint definition files
+/**/*.d.ts
+# don't ever lint node_modules
+node_modules
+scripts/pinia/*
+scripts/windi/*
+src/intl/*
+src/api/helpers/apiStatusComputedFactory.ts
+# don't lint build output (make sure it's set to your correct build folder name)
+dist
+public
+# don't lint nyc coverage output
+coverage
+# don't lint tailwind
+tailwind.config.js
+# don't lint eslint config
+# .eslintrc.js

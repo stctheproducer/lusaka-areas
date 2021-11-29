@@ -1,0 +1,43 @@
+# Variables
+site-name: Vite Boilerplate
+site-short-name: Vite Boilerplate
+# Pages
+# ? Format: Page -> Section -> Element
+global:
+  select:
+    languageLabel: Language
+    currencyLabel: Currency
+    languages: [English]
+    currencies: [Zambian Kwacha, US Dollars]
+  footer:
+    button:
+      about: About
+      back: Back
+      home: Home
+      toggle_dark: Toggle dark mode
+      toggle_langs: Change languages
+    copyright: All rights reserved.
+index:
+  hero:
+    text:
+      heading: Welcome to the template!
+
+not-found:
+  text:
+    type: 404 error
+    title: Page not found.
+    error: Sorry, we couldn’t find the page you’re looking for.
+    links:
+      home: Go back home
+      support: Contact Support
+      status: Status
+      social: Twitter
+
+# Notifications
+# ? Format: Page -> Section -> Interacting element -> Message Data
+notification:
+  index:
+    hero:
+      email:
+        success: Thank you for your interest! 🚀 You will receive an email with details.
+        error: An error occured!

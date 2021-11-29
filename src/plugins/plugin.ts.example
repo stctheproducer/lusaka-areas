@@ -1,0 +1,18 @@
+/**
+ *
+ * Plugin files are automatically loaded by the
+ * "unplugin-vue-components" package.
+ * Below, you can find an example of how
+ * to structure your plugins
+ *
+ * @example
+ *
+ * import plugin, { createConfig } from './plugin'
+ * import { UserModule } from '@/@types'
+ *
+ * const plugin = createConfig()
+ *
+ * export const install: UserModule = ({ app }) => {
+ *  app.use(head)
+ * }
+ */

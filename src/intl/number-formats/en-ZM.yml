@@ -1,0 +1,27 @@
+zmw:
+  style: currency
+  currency: ZMW
+  notation: standard
+  useGrouping: true
+  currencyDisplay: symbol
+
+usd:
+  style: currency
+  currency: USD
+  notation: standard
+  useGrouping: true
+  currencyDisplay: symbol
+
+decimal:
+  style: decimal
+  minimumFractionDigits: 2
+  maximumFractionDigits: 2
+
+percent:
+  style: percent
+  useGrouping: false
+
+kph:
+  unit: kilometer-per-hour
+  style: unit
+  useGrouping: false

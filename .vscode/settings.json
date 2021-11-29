@@ -1,0 +1,13 @@
+{
+  "i18n-ally.keystyle": "nested",
+  "i18n-ally.sortKeys": true,
+  "prettier.enable": true,
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "i18n-ally.localesPaths": "src/intl/messages",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "files.associations": {
+    "*.css": "postcss"
+  }
+}

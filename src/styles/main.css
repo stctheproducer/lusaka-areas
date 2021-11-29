@@ -1,0 +1,36 @@
+/* @import 'daisyui/dist/full'; */
+@import './markdown.css';
+
+html,
+body,
+#app {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+/* html[data-theme='dark'],
+html.dark {
+  background: #121212;
+} */
+
+#nprogress {
+  pointer-events: none;
+}
+
+#nprogress .bar {
+  @apply bg-teal-600 opacity-75;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1031;
+  width: 100%;
+  height: 2px;
+}
+
+.icon-btn {
+  @apply cursor-pointer opacity-75 transition ease-in-out duration-200 inline-block select-none hover:opacity-100 hover:text-teal-600;
+
+  font-size: 0.9em;
+}
