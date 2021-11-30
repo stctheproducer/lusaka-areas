@@ -1,43 +1,56 @@
-# Variables
-site-name: Vite Boilerplate
-site-short-name: Vite Boilerplate
-# Pages
-# ? Format: Page -> Section -> Element
 global:
-  select:
-    languageLabel: Language
-    currencyLabel: Currency
-    languages: [English]
-    currencies: [Zambian Kwacha, US Dollars]
   footer:
-    button:
-      about: About
-      back: Back
-      home: Home
-      toggle_dark: Toggle dark mode
-      toggle_langs: Change languages
-    copyright: All rights reserved.
+    copyright: Built with ❤️ by Chanda Mulenga
+  select:
+    currencies:
+      - Zambian Kwacha
+      - US Dollars
+    currencyLabel: Currency
+    languageLabel: Language
+    languages:
+      - English
 index:
   hero:
     text:
-      heading: Welcome to the template!
-
+      description: >-
+        This is just a small project to get the names of areas in Lusaka. I
+        needed to compile a list in a database and this is the easiest way I
+        could think of getting that list.
+      heading: Areas of Lusaka
+    form:
+      label: Area Name
+      placeholder: Enter an area
+      button: Submit
+  areas:
+    heading: List of Areas in Lusaka
+    loaded:
+      title: Successful Load
+      text: Areas loaded successfully!
+    added:
+      text: "{area} added to the list!"
+    error:
+      title: Error
+  no_areas:
+    heading: No areas
+    description: Get started by adding a new area.
+    add_area: New Area
 not-found:
   text:
-    type: 404 error
-    title: Page not found.
     error: Sorry, we couldn’t find the page you’re looking for.
     links:
       home: Go back home
-      support: Contact Support
-      status: Status
       social: Twitter
-
-# Notifications
-# ? Format: Page -> Section -> Interacting element -> Message Data
+      status: Status
+      support: Contact Support
+    title: Page not found.
+    type: 404 error
 notification:
   index:
     hero:
       email:
-        success: Thank you for your interest! 🚀 You will receive an email with details.
         error: An error occured!
+        success: >-
+          Thank you for your interest! 🚀 You will receive an email with
+          details.
+site-name: Lusaka Areas
+site-short-name: Lusaka Areas

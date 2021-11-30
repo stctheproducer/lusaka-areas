@@ -20,16 +20,14 @@ const { t } = useI18n()
         <span class="sr-only">{{ t('site-short-name') }}</span>
         <img
           class="h-12 w-auto"
-          src="https://tailwindui.com/img/logos/workflow-mark.svg?color=indigo&shade=600"
+          src="@/assets/full-logo.svg"
           :alt="t('site-name')"
         />
       </a>
     </div>
     <div class="py-16">
       <div class="text-center">
-        <p
-          class="font-semibold text-sm tracking-wide text-indigo-600 uppercase"
-        >
+        <p class="font-semibold text-sm text-primary tracking-wide uppercase">
           {{ t('not-found.text.type') }}
         </p>
         <h1
@@ -43,13 +41,15 @@ const { t } = useI18n()
         >
           {{ t('not-found.text.title') }}
         </h1>
-        <p class="mt-2 text-base text-gray-500">{{ t('not-found.text') }}</p>
+        <p class="mt-2 text-base text-gray-500">
+          {{ t('not-found.text.error') }}
+        </p>
         <div class="mt-6">
-          <a
-            href="#"
-            class="font-medium text-base text-indigo-600 hover:text-indigo-500"
-            >{{ t('not-found.text.link')
-            }}<span aria-hidden="true"> &rarr;</span></a
+          <router-link
+            to="/"
+            class="font-medium text-base text-primary hover:text-primary-600"
+            >{{ t('not-found.text.links.home')
+            }}<span aria-hidden="true"> &rarr;</span></router-link
           >
         </div>
       </div>
