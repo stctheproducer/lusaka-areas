@@ -24,8 +24,11 @@ export const useAreasStore = defineStore(
     }
 
     const tableName = 'lusaka_areas'
-    const areas = ref<Area[]>([])
-    const areasPopulated = computed(() => areas.value.length > 0)
+    const areaList = ref<Area[]>([])
+    const areas = computed(() =>
+      areaList.value.sort((a, b) => a.name.localeCompare(b.name))
+    )
+    const areasPopulated = computed(() => areaList.value.length > 0)
     const subscription = ref<RealtimeSubscription | null>(null)
 
     const loadAreas = async () => {
@@ -42,7 +45,7 @@ export const useAreasStore = defineStore(
         return
       }
 
-      areas.value = <Area[]>data
+      areaList.value = <Area[]>data
 
       if (areasPopulated.value)
         notify({
@@ -88,7 +91,7 @@ export const useAreasStore = defineStore(
         return
       }
 
-      areas.value.push(<Area>newAreas?.[0])
+      areaList.value.push(<Area>newAreas?.[0])
 
       notify({
         group: 'toast',
@@ -101,8 +104,8 @@ export const useAreasStore = defineStore(
       subscription.value = supabase
         .from(tableName)
         .on('INSERT', (area: SupabaseRealtimePayload<Area>) => {
-          if (!areas.value.some((a) => a.slug === area.new.slug)) {
-            areas.value.push(area.new)
+          if (!areaList.value.some((a) => a.slug === area.new.slug)) {
+            areaList.value.push(area.new)
             notify({
               group: 'toast',
               text: t('index.areas.added.text_third', { area: area.new.name }),
