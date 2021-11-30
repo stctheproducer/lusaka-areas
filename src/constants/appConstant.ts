@@ -3,7 +3,8 @@ export enum appConstant {
   SHORT_NAME = 'Lusaka Areas',
   DESCRIPTION = 'A list of areas within Lusaka. Nothing major, just a small website for vibes.',
   URL = 'https://lsk.stctheproducer.com',
-  TWITTER_CARD = 'summary', // summary, summary_large_image, app, player
+  DOMAIN = 'lsk.stctheproducer.com',
+  TWITTER_CARD = 'summary_large_image', // summary, summary_large_image, app, player
   TWITTER_SITE = '',
   TWITTER_CREATOR = '@stctheproducer',
   // article, website, book, movie, actor, politician.
