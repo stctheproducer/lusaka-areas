@@ -3,7 +3,6 @@ import { notify } from 'notiwind'
 import slugify from 'lodash-es/kebabCase'
 import words from 'lodash-es/words'
 import startCase from 'lodash-es/startCase'
-import upperFirst from 'lodash-es/upperFirst'
 import {
   RealtimeSubscription,
   SupabaseRealtimePayload,
@@ -35,7 +34,7 @@ export const useAreasStore = defineStore(
           group: 'simple',
           type: 'error',
           title: t('index.areas.error.title'),
-          text: upperFirst(error.message),
+          text: startCase(error.message),
         })
 
         return
@@ -67,20 +66,12 @@ export const useAreasStore = defineStore(
         .insert([post])
 
       if (error) {
-        const title =
-          error.code === '23505'
-            ? t('index.areas.error.duplicate.title')
-            : t('index.areas.error.title')
-        const message =
-          error.code === '23505'
-            ? t('index.areas.error.duplicate.text')
-            : upperFirst(error.message)
-
+        console.log('[addArea]:', error)
         notify({
           group: 'simple',
           type: 'error',
-          title,
-          text: message,
+          title: t('index.areas.error.title'),
+          text: startCase(error.message),
         })
 
         return

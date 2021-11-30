@@ -30,9 +30,6 @@ index:
       text: "{area} added to the list!"
     error:
       title: Error
-      duplicate:
-        title: Duplicate Area
-        text: The area has already been added!
   no_areas:
     heading: No areas
     description: Get started by adding a new area.
