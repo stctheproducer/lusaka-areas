@@ -6,6 +6,8 @@ export enum appConstant {
   TWITTER_CARD = 'summary', // summary, summary_large_image, app, player
   TWITTER_SITE = '',
   TWITTER_CREATOR = '@stctheproducer',
+  // article, website, book, movie, actor, politician.
+  // Full list http://ogp.me/#types
   OG_TYPE = 'website',
   THEME_COLOR = '#ffffff',
 }
