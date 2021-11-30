@@ -9,7 +9,7 @@ useHead({
   title: appConstant.NAME,
   meta: [
     { name: 'description', content: appConstant.DESCRIPTION },
-    { name: 'twitter:card', content: 'summary' },
+    { name: 'twitter:card', content: appConstant.TWITTER_CARD },
     // { name: 'twitter:site', content: appConstant.TWITTER_SITE },
     { name: 'twitter:creator', content: appConstant.TWITTER_CREATOR },
     { property: 'og:url', content: appConstant.URL },
