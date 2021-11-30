@@ -52,7 +52,7 @@ export const useAreasStore = defineStore(
     }
 
     const addArea = async (areaName: string) => {
-      const name = startCase(areaName.replace(/\d/g, ''))
+      const name = startCase(areaName)
       const post = {
         name,
         slug: slugify(name),
