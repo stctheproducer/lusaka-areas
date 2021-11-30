@@ -23,12 +23,13 @@ export const useAreasStore = defineStore(
       slug: string
     }
 
+    const tableName = 'lusaka_areas_duplicate'
     const areas = ref<Area[]>([])
     const areasPopulated = computed(() => areas.value.length > 0)
     const subscription = ref<RealtimeSubscription | null>(null)
 
     const loadAreas = async () => {
-      const { data, error } = await supabase.from('lusaka_areas').select()
+      const { data, error } = await supabase.from(tableName).select()
 
       if (error) {
         notify({
@@ -43,12 +44,13 @@ export const useAreasStore = defineStore(
 
       areas.value = <Area[]>data
 
-      notify({
-        group: 'simple',
-        type: 'success',
-        title: t('index.areas.loaded.title'),
-        text: t('index.areas.loaded.text'),
-      })
+      if (areasPopulated.value)
+        notify({
+          group: 'simple',
+          type: 'success',
+          title: t('index.areas.loaded.title'),
+          text: t('index.areas.loaded.text'),
+        })
     }
 
     const addArea = async (areaName: string) => {
@@ -63,7 +65,7 @@ export const useAreasStore = defineStore(
       }
 
       const { data: newAreas, error } = await supabase
-        .from('lusaka_areas')
+        .from(tableName)
         .insert([post])
 
       if (error) {
@@ -97,10 +99,14 @@ export const useAreasStore = defineStore(
     // Handle realtime data changes
     const subscribe = () => {
       subscription.value = supabase
-        .from('lusaka_areas')
+        .from(tableName)
         .on('INSERT', (area: SupabaseRealtimePayload<Area>) => {
-          if (area.new) {
+          if (!areas.value.some((a) => a.slug === area.new.slug)) {
             areas.value.push(area.new)
+            notify({
+              group: 'toast',
+              text: t('index.areas.added.text_third', { area: area.new.name }),
+            })
           }
         })
         .subscribe()

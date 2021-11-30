@@ -28,6 +28,7 @@ index:
       text: Areas loaded successfully!
     added:
       text: "{area} added to the list!"
+      text_third: "Someone added {area} to the list!"
     error:
       title: Error
       duplicate:
