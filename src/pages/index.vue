@@ -1,10 +1,12 @@
 <script setup lang="ts">
-const { t } = useI18n()
+import HeroSection from './components/hero-section.vue'
+import AreaListSection from './components/area-list-section.vue'
 </script>
 
 <template>
-  <div class="my-2">
-    <h1 class="text-center tracking-wide text-4xl">{{ t('index.welcome') }}</h1>
+  <div class="flex-1">
+    <hero-section />
+    <area-list-section class="container mx-auto px-4 sm:px-6 lg:px-8" />
   </div>
 </template>
 

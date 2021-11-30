@@ -1,11 +1,11 @@
 <script setup lang="ts">
-const { t } = useI18n()
+// const { t } = useI18n()
 </script>
 
 <template>
-  <div class="bg-white flex flex-col min-h-full pt-16 pb-12">
+  <div class="bg-white flex flex-col min-h-full pt-16 pb-12 antialiased">
     <router-view />
-    <footer class="mx-auto flex-shrink-0 w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+    <!-- <footer class="mx-auto flex-shrink-0 w-full max-w-7xl px-4 sm:px-6 lg:px-8">
       <nav class="flex space-x-4 justify-center">
         <a
           href="#"
@@ -31,6 +31,6 @@ const { t } = useI18n()
           >{{ t('not-found.text.links.social') }}</a
         >
       </nav>
-    </footer>
+    </footer> -->
   </div>
 </template>

@@ -1,7 +1,7 @@
 export enum appConstant {
-  NAME = 'Vue Vite Boilerplate',
-  SHORT_NAME = 'Vite Boilerplate',
-  DESCRIPTION = 'Enterprise Vite Starter Template',
+  NAME = 'Lusaka Areas',
+  SHORT_NAME = 'Lusaka Areas',
+  DESCRIPTION = 'A list of areas within Lusaka. Nothing major, just a small website for vibes.',
   THEME_COLOR = '#ffffff',
 }
 

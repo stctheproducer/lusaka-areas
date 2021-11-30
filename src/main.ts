@@ -16,10 +16,10 @@ import { routes, scrollBehavior } from '@/router'
 // https://github.com/antfu/vite-ssg
 export const createApp = ViteSSG(App, { routes, scrollBehavior }, (ctx) => {
   // Recognise custom elements
-  // if (import.meta.env.PROD) {
-  //   ctx.app.config.compilerOptions.isCustomElement = (tag) =>
-  //     tag.startsWith('lottie-player')
-  // }
+  if (import.meta.env.PROD) {
+    ctx.app.config.compilerOptions.isCustomElement = (tag) =>
+      tag.startsWith('lottie-player')
+  }
 
   if (!import.meta.env.SSR) {
     ctx.router.beforeEach(() => {

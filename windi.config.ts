@@ -50,6 +50,19 @@ export default defineConfig({
       colors: {
         teal: colors.teal,
         cyan: colors.cyan,
+        primary: {
+          DEFAULT: '#FFAA00',
+          '50': '#FFE7B8',
+          '100': '#FFE0A3',
+          '200': '#FFD37A',
+          '300': '#FFC552',
+          '400': '#FFB829',
+          '500': '#FFAA00',
+          '600': '#C78500',
+          '700': '#8F5F00',
+          '800': '#573A00',
+          '900': '#1F1400',
+        },
         // ...themeColors,
       },
 

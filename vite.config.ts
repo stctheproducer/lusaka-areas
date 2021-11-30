@@ -47,11 +47,11 @@ export default defineConfig({
         refTransform: true,
       },
       // Recognise custom elements
-      // template: {
-      //   compilerOptions: {
-      //     isCustomElement: (tag) => tag.startsWith('lottie-player'),
-      //   },
-      // },
+      template: {
+        compilerOptions: {
+          isCustomElement: (tag) => tag.startsWith('lottie-player'),
+        },
+      },
     }),
 
     // https://github.com/hannoeru/vite-plugin-pages

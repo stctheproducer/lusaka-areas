@@ -1,9 +1,9 @@
 <template>
   <div :class="$style.defaultLayout">
-    <nav-bar></nav-bar>
+    <!-- <nav-bar></nav-bar> -->
     <div :class="$style.contentContainer">
-      <!-- <main :class="$style.mainContent"> -->
-      <main>
+      <main :class="$style.mainContent">
+        <!-- <main> -->
         <router-view v-slot="{ Component }">
           <transition
             enter-from-class="opacity-0"
@@ -18,7 +18,7 @@
             <component :is="Component"></component>
           </transition>
         </router-view>
-        <foo-ter></foo-ter>
+        <foo-ter class="flex-shrink-0"></foo-ter>
       </main>
     </div>
     <notifications />
@@ -27,13 +27,14 @@
 
 <style module>
 .defaultLayout {
-  @apply mx-auto min-h-screen w-full antialiased;
+  @apply h-full mx-auto min-h-screen w-full antialiased;
 }
 
 .contentContainer {
-  @apply mx-auto w-full;
+  @apply h-full mx-auto w-full;
 }
 
-/* .mainContent {
-} */
+.mainContent {
+  @apply flex flex-col h-full;
+}
 </style>
