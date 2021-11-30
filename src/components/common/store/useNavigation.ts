@@ -12,7 +12,7 @@ export const useNavigationStore = defineStore(
     const socialLinks = [
       {
         name: 'GitHub',
-        href: 'https://github.com/stctheproducer',
+        href: 'https://github.com/stctheproducer/lusaka-areas',
         icon: 'mdi:github',
       },
       {
