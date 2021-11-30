@@ -23,7 +23,7 @@ export const useAreasStore = defineStore(
       slug: string
     }
 
-    const tableName = 'lusaka_areas_duplicate'
+    const tableName = 'lusaka_areas'
     const areas = ref<Area[]>([])
     const areasPopulated = computed(() => areas.value.length > 0)
     const subscription = ref<RealtimeSubscription | null>(null)
