@@ -74,7 +74,7 @@ export const useAreasStore = defineStore(
         const message =
           error.code === '23505'
             ? t('index.areas.error.duplicate.text')
-            : startCase(error.message)
+            : upperFirst(error.message)
 
         notify({
           group: 'simple',
