@@ -1,6 +1,6 @@
 {
-  "name": "vite-enterprise-boilerplate",
-  "version": "1.0.0",
+  "name": "lusaka-areas",
+  "version": "1.0.2",
   "private": true,
   "scripts": {
     "prepare": "husky install",
